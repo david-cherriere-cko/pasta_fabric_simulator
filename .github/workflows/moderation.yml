@@ -65,6 +65,7 @@ jobs:
           RETENTION_PERIOD: ${{ secrets.RETENTION_PERIOD }}
         id: check_comment  
         run: |
+          echo "$ORGANISATION"
           echo "Checking the following comment..."
           echo "${{ github.event.comment.body }}" 
 
